@@ -9,15 +9,24 @@ let pcard3;
 let pcard4;
 let pcard5;
 
+
+
 // Dealers Total and Card Total
 let dealertotal = 0;
 let dealernumcards = 2;
 
+// Initilize Dealer's card variables
+let dcard3;
+let dcard4;
+let dcard5
 
 // Player 1's Hit Function
 function hitp1() {
 
-    if (p1total > 21) { return }
+    if (p1total > 21) {
+            document.getElementById("dealer2").src = `images/${dcard2}.bmp`;
+            document.getElementById("dealer").innerHTML = dealertotal; 
+            return }
 
     // Player 1's Card 3 to 5 Math
     if (p1numcards == 2) {
@@ -69,6 +78,13 @@ document.getElementById("1").src = `images/${pcard1}.bmp`;
 
 let pcard2 = Math.floor(52 * Math.random()) + 1;
 document.getElementById("2").src = `images/${pcard2}.bmp`;
+
+//Dealer's Card 1 and 2
+let dcard1 = Math.floor(52 * Math.random()) + 1;
+document.getElementById("dealer1").src = `images/${dcard1}.bmp`;
+
+let dcard2 = Math.floor(52 * Math.random()) + 1;
+if ((p1total > 21)) {document.getElementById("dealer2").src = `images/${dcard2}.bmp`;}
 
 
 //--------------------------Player 1's Total Counter (1&2)----------------------------------
@@ -126,9 +142,63 @@ if((pcard2==12)||(pcard2==25)||(pcard2==38)||(pcard2==51)) { p1total=p1total+10;
 if((pcard2==13)||(pcard2==26)||(pcard2==39)||(pcard2==52)) { p1total=p1total+10; }
 //-------------------------------------END------------------------------------------
 
+//----------------------------------Dealer's Total Counter (1&2)--------------------------
+if((dcard1==1)||(dcard1==14)||(dcard1==27)||(dcard1==40)) { dealertotal=dealertotal+1; }
+
+if((dcard1==2)||(dcard1==15)||(dcard1==28)||(dcard1==41)) { dealertotal=dealertotal+2; }
+
+if((dcard1==3)||(dcard1==16)||(dcard1==29)||(dcard1==42)) { dealertotal=dealertotal+3; }
+
+if((dcard1==4)||(dcard1==17)||(dcard1==30)||(dcard1==43)) { dealertotal=dealertotal+4; }
+
+if((dcard1==5)||(dcard1==18)||(dcard1==31)||(dcard1==44)) { dealertotal=dealertotal+5; }
+
+if((dcard1==6)||(dcard1==19)||(dcard1==32)||(dcard1==45)) { dealertotal=dealertotal+6; }
+
+if((dcard1==7)||(dcard1==20)||(dcard1==33)||(dcard1==46)) { dealertotal=dealertotal+7; }
+
+if((dcard1==8)||(dcard1==21)||(dcard1==34)||(dcard1==47)) { dealertotal=dealertotal+8; }
+
+if((dcard1==9)||(dcard1==22)||(dcard1==35)||(dcard1==48)) { dealertotal=dealertotal+9; }
+
+if((dcard1==10)||(dcard1==23)||(dcard1==36)||(dcard1==49)) { dealertotal=dealertotal+10; }
+
+if((dcard1==11)||(dcard1==24)||(dcard1==37)||(dcard1==50)) { dealertotal=dealertotal+10; }
+
+if((dcard1==12)||(dcard1==25)||(dcard1==38)||(dcard1==51)) { dealertotal=dealertotal+10; }
+
+if((dcard1==13)||(dcard1==26)||(dcard1==39)||(dcard1==52)) { dealertotal=dealertotal+10; }
+
+
+if((dcard2==1)||(dcard2==14)||(dcard2==27)||(dcard2==40)) { dealertotal=dealertotal+1; }
+
+if((dcard2==2)||(dcard2==15)||(dcard2==28)||(dcard2==41)) { dealertotal=dealertotal+2; }
+
+if((dcard2==3)||(dcard2==16)||(dcard2==29)||(dcard2==42)) { dealertotal=dealertotal+3; }
+
+if((dcard2==4)||(dcard2==17)||(dcard2==30)||(dcard2==43)) { dealertotal=dealertotal+4; }
+
+if((dcard2==5)||(dcard2==18)||(dcard2==31)||(dcard2==44)) { dealertotal=dealertotal+5; }
+
+if((dcard2==6)||(dcard2==19)||(dcard2==32)||(dcard2==45)) { dealertotal=dealertotal+6; }
+
+if((dcard2==7)||(dcard2==20)||(dcard2==33)||(dcard2==46)) { dealertotal=dealertotal+7; }
+
+if((dcard2==8)||(dcard2==21)||(dcard2==34)||(dcard2==47)) { dealertotal=dealertotal+8; }
+
+if((dcard2==9)||(dcard2==22)||(dcard2==35)||(dcard2==48)) { dealertotal=dealertotal+9; }
+
+if((dcard2==10)||(dcard2==23)||(dcard2==36)||(dcard2==49)) { dealertotal=dealertotal+10; }
+
+if((dcard2==11)||(dcard2==24)||(dcard2==37)||(dcard2==50)) { dealertotal=dealertotal+10; }
+
+if((dcard2==12)||(dcard2==25)||(dcard2==38)||(dcard2==51)) { dealertotal=dealertotal+10; }
+
+if((dcard2==13)||(dcard2==26)||(dcard2==39)||(dcard2==52)) { dealertotal=dealertotal+10; }
+//------------------------------------------END-----------------------------------------
+
 
 document.getElementById("p1").innerHTML = p1total;
-
-
-
 document.getElementById("p2").innerHTML = p2total;
+
+if ((p1total > 21)) {document.getElementById("dealer").innerHTML = dealertotal;}
