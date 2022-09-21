@@ -18,15 +18,12 @@ let dealernumcards = 2;
 // Initilize Dealer's card variables
 let dcard3;
 let dcard4;
-let dcard5
+let dcard5;
 
 // Player 1's Hit Function
 function hitp1() {
 
-    if (p1total > 21) {
-            document.getElementById("dealer2").src = `images/${dcard2}.bmp`;
-            document.getElementById("dealer").innerHTML = dealertotal; 
-            return }
+    if (p1total > 21) { return }
 
     // Player 1's Card 3 to 5 Math
     if (p1numcards == 2) {
@@ -72,6 +69,62 @@ function hitp1() {
     p1numcards++;
 }
 
+function standp1() {
+    
+    
+    if (dealertotal < 18) {
+        while (dealertotal < 18) {
+            if (dealernumcards == 2) {
+                dcard3 = Math.floor(52 * Math.random()) + 1;
+                document.getElementById("dealer3").src = `images/${dcard3}.bmp`;
+            } else if (dealernumcards == 3) {
+                dcard4 = Math.floor(52 * Math.random()) + 1;
+                document.getElementById("dealer4").src = `images/${dcard4}.bmp`;
+            } else if (dealernumcards == 4) {
+                dcard5 = Math.floor(52 * Math.random()) + 1;
+                document.getElementById("dealer5").src = `images/${dcard5}.bmp`;
+            }
+
+            if((dcard3==1)||(dcard3==14)||(dcard3==27)||(dcard3=40)) { dealertotal=dealertotal+1; }
+
+            if((dcard3==2)||(dcard3==15)||(dcard3==28)||(dcard3=41)) { dealertotal=dealertotal+2; }
+            
+            if((dcard3==3)||(dcard3==16)||(dcard3==29)||(dcard3=42)) { dealertotal=dealertotal+3; }
+            
+            if((dcard3==4)||(dcard3==17)||(dcard3==30)||(dcard3=43)) { dealertotal=dealertotal+4; }
+            
+            if((dcard3==5)||(dcard3==18)||(dcard3==31)||(dcard3=44)) { dealertotal=dealertotal+5; }
+            
+            if((dcard3==6)||(dcard3==19)||(dcard3==32)||(dcard3=45)) { dealertotal=dealertotal+6; }
+            
+            if((dcard3==7)||(dcard3==20)||(dcard3==33)||(dcard3=46)) { dealertotal=dealertotal+7; }
+            
+            if((dcard3==8)||(dcard3==21)||(dcard3==34)||(dcard3=47)) { dealertotal=dealertotal+8; }
+            
+            if((dcard3==9)||(dcard3==22)||(dcard3==35)||(dcard3=48)) { dealertotal=dealertotal+9; }
+            
+            if((dcard3==10)||(dcard3==23)||(dcard3==36)||(dcard3=49)) { dealertotal=dealertotal+10; }
+            
+            if((dcard3==11)||(dcard3==24)||(dcard3==37)||(dcard3=50)) { dealertotal=dealertotal+10; }
+            
+            if((dcard3==12)||(dcard3==25)||(dcard3==38)||(dcard3=51)) { dealertotal=dealertotal+10; }
+            
+            if((dcard3==13)||(dcard3==26)||(dcard3==39)||(dcard3=52)) { dealertotal=dealertotal+10; }
+
+            document.getElementById("dealer").innerHTML = dealertotal; 
+
+            dealernumcards++;
+            }
+    
+
+        
+     }
+
+if (dealertotal > 18) {document.getElementById("dealer2").src = `images/${dcard2}.bmp`;
+ return}
+}
+
+
 // Player 1's Card 1 and 2 Math
 let pcard1 = Math.floor(52 * Math.random()) + 1;
 document.getElementById("1").src = `images/${pcard1}.bmp`;
@@ -84,7 +137,7 @@ let dcard1 = Math.floor(52 * Math.random()) + 1;
 document.getElementById("dealer1").src = `images/${dcard1}.bmp`;
 
 let dcard2 = Math.floor(52 * Math.random()) + 1;
-if ((p1total > 21)) {document.getElementById("dealer2").src = `images/${dcard2}.bmp`;}
+
 
 
 //--------------------------Player 1's Total Counter (1&2)----------------------------------
@@ -201,4 +254,3 @@ if((dcard2==13)||(dcard2==26)||(dcard2==39)||(dcard2==52)) { dealertotal=dealert
 document.getElementById("p1").innerHTML = p1total;
 document.getElementById("p2").innerHTML = p2total;
 
-if ((p1total > 21)) {document.getElementById("dealer").innerHTML = dealertotal;}
