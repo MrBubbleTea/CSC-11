@@ -66,6 +66,8 @@ let dealernumcards = 1;
 // Player 1's Hit Function
 function hitp1() {
 
+    if (stophitp1) {return}
+
     if (p1total >= 21) { return }
 
     // Player 1's Card 3 to 5 Math
@@ -367,9 +369,9 @@ function standp1() {
     }
   dealernumcards++;
   }
-  
+   Element("hitp1").disabled = true
     document.getElementById("dealer").innerHTML = dealertotal;
- 
+ var stophitp1 = false;
 }
 
 
