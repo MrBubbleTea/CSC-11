@@ -55,7 +55,9 @@ let pcard7;
 let dcard2;
 let dcard3;
 let dcard4;
-
+let dcard5;
+let dcard6;
+let dcard7;
 
 // Dealers Total and Card Total
 let dealertotal = 0;
@@ -119,7 +121,7 @@ function hitp1() {
 }
 
 // Reworked hitp1
-function hitp1REWORK() {
+/*function hitp1REWORK() {
 
     if (p1total >= 21) { return }
 
@@ -139,7 +141,7 @@ function hitp1REWORK() {
     document.getElementById("p1").innerHTML = p1total;
 
     p1numcards++;
-}
+} */
 
 
 
@@ -157,19 +159,26 @@ document.getElementById("p1").innerHTML = p1total;
 let dcard1 = Math.floor(52 * Math.random()) + 1;
 document.getElementById("dealer1").src = `images/${dcard1}.bmp`;
 
+
+
+
 //Dealer's Hidden Card Math (2 to 4)
 
 
 function standp1() {
 
+    
     if (dealertotal >= 17 ) {return}
 
- document.getElementById("dealer2").src = `images/${dcard2}.bmp`;
 
- while (dealertotal < 17) {
+  while (dealertotal < 17) {
     console.log(dealertotal)
+    console.log(dealer3)
+    console.log(dealer4)
     document.getElementById("dealer").src = dealertotal
-    if (dealernumcards == 2) {
+
+    if (dealernumcards == 1) {
+      
         dcard2 = Math.floor(52 * Math.random()) + 1;
 
         if((dcard2==1)||(dcard2==14)||(dcard2==27)||(dcard2==40)) { dealertotal=dealertotal+1; }
@@ -200,8 +209,10 @@ function standp1() {
 
         document.getElementById("dealer2").src = `images/${dcard2}.bmp`;
     }
-    else if (dealernumcards == 3) {
+    else if (dealernumcards == 2) {
+     
         dcard3 = Math.floor(52 * Math.random()) + 1;
+
         if((dcard3==1)||(dcard3==14)||(dcard3==27)||(dcard3==40)) { dealertotal=dealertotal+1; }
 
         if((dcard3==2)||(dcard3==15)||(dcard3==28)||(dcard3==41)) { dealertotal=dealertotal+2; }
@@ -227,10 +238,13 @@ function standp1() {
         if((dcard3==12)||(dcard3==25)||(dcard3==38)||(dcard3==51)) { dealertotal=dealertotal+10; }
         
         if((dcard3==13)||(dcard3==26)||(dcard3==39)||(dcard3==52)) { dealertotal=dealertotal+10; }
+        
         document.getElementById("dealer3").src = `images/${dcard3}.bmp`;
     }
-    else if (dealernumcards == 4) {
+    else if (dealernumcards == 3) {
+    
         dcard4 = Math.floor(52 * Math.random()) + 1;
+
         if((dcard4==1)||(dcard4==14)||(dcard4==27)||(dcard4==40)) { dealertotal=dealertotal+1; }
 
         if((dcard4==2)||(dcard4==15)||(dcard4==28)||(dcard4==41)) { dealertotal=dealertotal+2; }
@@ -258,9 +272,102 @@ function standp1() {
         if((dcard4==13)||(dcard4==26)||(dcard4==39)||(dcard4==52)) { dealertotal=dealertotal+10; } 
         document.getElementById("dealer4").src = `images/${dcard4}.bmp`;
     }
- if (dealertotal >= 17 ) {break}
- }
-
+    else if (dealernumcards == 4) {
+    
+        dcard5 = Math.floor(52 * Math.random()) + 1;
+    
+        if((dcard5==1)||(dcard5==14)||(dcard5==27)||(dcard5==40)) { dealertotal=dealertotal+1; }
+    
+        if((dcard5==2)||(dcard5==15)||(dcard5==28)||(dcard5==41)) { dealertotal=dealertotal+2; }
+        
+        if((dcard5==3)||(dcard5==16)||(dcard5==29)||(dcard5==42)) { dealertotal=dealertotal+3; }
+        
+        if((dcard5==4)||(dcard5==17)||(dcard5==30)||(dcard5==43)) { dealertotal=dealertotal+4; }
+        
+        if((dcard5==5)||(dcard5==18)||(dcard5==31)||(dcard5==44)) { dealertotal=dealertotal+5; }
+        
+        if((dcard5==6)||(dcard5==19)||(dcard5==32)||(dcard5==45)) { dealertotal=dealertotal+6; }
+        
+        if((dcard5==7)||(dcard5==20)||(dcard5==33)||(dcard5==46)) { dealertotal=dealertotal+7; }
+        
+        if((dcard5==8)||(dcard5==21)||(dcard5==34)||(dcard5==47)) { dealertotal=dealertotal+8; }
+        
+        if((dcard5==9)||(dcard5==22)||(dcard5==35)||(dcard5==48)) { dealertotal=dealertotal+9; }
+        
+        if((dcard5==10)||(dcard5==23)||(dcard5==36)||(dcard5==49)) { dealertotal=dealertotal+10; }
+        
+        if((dcard5==11)||(dcard5==24)||(dcard5==37)||(dcard5==50)) { dealertotal=dealertotal+10; }
+        
+        if((dcard5==12)||(dcard5==25)||(dcard5==38)||(dcard5==51)) { dealertotal=dealertotal+10; }
+        
+        if((dcard5==13)||(dcard5==26)||(dcard5==39)||(dcard5==52)) { dealertotal=dealertotal+10; } 
+        document.getElementById("dealer5").src = `images/${dcard5}.bmp`;
+    }
+    else if (dealernumcards == 5) {
+    
+        dcard6 = Math.floor(52 * Math.random()) + 1;
+    
+        if((dcard6==1)||(dcard6==14)||(dcard6==27)||(dcard6==40)) { dealertotal=dealertotal+1; }
+    
+        if((dcard6==2)||(dcard6==15)||(dcard6==28)||(dcard6==41)) { dealertotal=dealertotal+2; }
+        
+        if((dcard6==3)||(dcard6==16)||(dcard6==29)||(dcard6==42)) { dealertotal=dealertotal+3; }
+        
+        if((dcard6==4)||(dcard6==17)||(dcard6==30)||(dcard6==43)) { dealertotal=dealertotal+4; }
+        
+        if((dcard6==5)||(dcard6==18)||(dcard6==31)||(dcard6==44)) { dealertotal=dealertotal+5; }
+        
+        if((dcard6==6)||(dcard6==19)||(dcard6==32)||(dcard6==45)) { dealertotal=dealertotal+6; }
+        
+        if((dcard6==7)||(dcard6==20)||(dcard6==33)||(dcard6==46)) { dealertotal=dealertotal+7; }
+        
+        if((dcard6==8)||(dcard6==21)||(dcard6==34)||(dcard6==47)) { dealertotal=dealertotal+8; }
+        
+        if((dcard6==9)||(dcard6==22)||(dcard6==35)||(dcard6==48)) { dealertotal=dealertotal+9; }
+        
+        if((dcard6==10)||(dcard6==23)||(dcard6==36)||(dcard6==49)) { dealertotal=dealertotal+10; }
+        
+        if((dcard6==11)||(dcard6==24)||(dcard6==37)||(dcard6==50)) { dealertotal=dealertotal+10; }
+        
+        if((dcard6==12)||(dcard6==25)||(dcard6==38)||(dcard6==51)) { dealertotal=dealertotal+10; }
+        
+        if((dcard6==13)||(dcard6==26)||(dcard6==39)||(dcard6==52)) { dealertotal=dealertotal+10; } 
+        document.getElementById("dealer6").src = `images/${dcard6}.bmp`;
+    }
+    else if (dealernumcards == 6) {
+    
+        dcard7 = Math.floor(52 * Math.random()) + 1;
+    
+        if((dcard7==1)||(dcard7==14)||(dcard7==27)||(dcard7==40)) { dealertotal=dealertotal+1; }
+    
+        if((dcard7==2)||(dcard7==15)||(dcard7==28)||(dcard7==41)) { dealertotal=dealertotal+2; }
+        
+        if((dcard7==3)||(dcard7==16)||(dcard7==29)||(dcard7==42)) { dealertotal=dealertotal+3; }
+        
+        if((dcard7==4)||(dcard7==17)||(dcard7==30)||(dcard7==43)) { dealertotal=dealertotal+4; }
+        
+        if((dcard7==5)||(dcard7==18)||(dcard7==31)||(dcard7==44)) { dealertotal=dealertotal+5; }
+        
+        if((dcard7==6)||(dcard7==19)||(dcard7==32)||(dcard7==45)) { dealertotal=dealertotal+6; }
+        
+        if((dcard7==7)||(dcard7==20)||(dcard7==33)||(dcard7==46)) { dealertotal=dealertotal+7; }
+        
+        if((dcard7==8)||(dcard7==21)||(dcard7==34)||(dcard7==47)) { dealertotal=dealertotal+8; }
+        
+        if((dcard7==9)||(dcard7==22)||(dcard7==35)||(dcard7==48)) { dealertotal=dealertotal+9; }
+        
+        if((dcard7==10)||(dcard7==23)||(dcard7==36)||(dcard7==49)) { dealertotal=dealertotal+10; }
+        
+        if((dcard7==11)||(dcard7==24)||(dcard7==37)||(dcard7==50)) { dealertotal=dealertotal+10; }
+        
+        if((dcard7==12)||(dcard7==25)||(dcard7==38)||(dcard7==51)) { dealertotal=dealertotal+10; }
+        
+        if((dcard7==13)||(dcard7==26)||(dcard7==39)||(dcard7==52)) { dealertotal=dealertotal+10; } 
+        document.getElementById("dealer7").src = `images/${dcard7}.bmp`;
+    }
+  dealernumcards++;
+  }
+  
     document.getElementById("dealer").innerHTML = dealertotal;
 }
 
@@ -347,20 +454,10 @@ if((dcard1==12)||(dcard1==25)||(dcard1==38)||(dcard1==51)) { dealertotal=dealert
 
 if((dcard1==13)||(dcard1==26)||(dcard1==39)||(dcard1==52)) { dealertotal=dealertotal+10; }
 
-
-
-      
-
-
-     
-
-
-
-
-
-
+document.getElementById("dealer").innerHTML = dealertotal;
 
 //------------------------------------------END-----------------------------------------
+
 
 
 
