@@ -153,7 +153,7 @@ document.getElementById("1").src = `images/${pcard1}.bmp`;
 let pcard2 = Math.floor(52 * Math.random()) + 1;
 document.getElementById("2").src = `images/${pcard2}.bmp`;
 
-document.getElementById("p1").innerHTML = p1total;
+
 
 //Dealer's Card 1 and 2
 let dcard1 = Math.floor(52 * Math.random()) + 1;
@@ -369,6 +369,7 @@ function standp1() {
   }
   
     document.getElementById("dealer").innerHTML = dealertotal;
+ 
 }
 
 
@@ -425,6 +426,9 @@ if((pcard2==11)||(pcard2==24)||(pcard2==37)||(pcard2==50)) { p1total=p1total+10;
 if((pcard2==12)||(pcard2==25)||(pcard2==38)||(pcard2==51)) { p1total=p1total+10; }
 
 if((pcard2==13)||(pcard2==26)||(pcard2==39)||(pcard2==52)) { p1total=p1total+10; }
+
+document.getElementById("p1").innerHTML = p1total;
+
 //-------------------------------------END------------------------------------------
 
 //----------------------------------Dealer's Total Counter (1&2)--------------------------
