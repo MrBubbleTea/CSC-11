@@ -59,6 +59,8 @@ let dcard5;
 let dcard6;
 let dcard7;
 
+var stophip1 = true
+
 // Dealers Total and Card Total
 let dealertotal = 0;
 let dealernumcards = 1;
@@ -66,7 +68,7 @@ let dealernumcards = 1;
 // Player 1's Hit Function
 function hitp1() {
 
-    if (stophitp1) {return}
+    if (stophitp1 = false) {return}
 
     if (p1total >= 21) { return }
 
@@ -369,9 +371,18 @@ function standp1() {
     }
   dealernumcards++;
   }
-   Element("hitp1").disabled = true
     document.getElementById("dealer").innerHTML = dealertotal;
- var stophitp1 = false;
+stophitp1 = false;
+
+ if ((dealertotal < p1total)&&(p1total < 21)) {
+    document.getElementById("win").src = `images/win.gif`;
+ }
+ else if ((dealertotal > p1total)||(p1total > 21)) {
+    document.getElementById("lose").src = `images/lose.gif`;
+ }
+
+
+
 }
 
 
