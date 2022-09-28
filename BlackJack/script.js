@@ -4,45 +4,7 @@ let p1numcards = 2;
 let p2total = 0;
 let p2numcards = 2;
 
-/* const suits = ["h", "s", "c", "d"];
-const cards = ["a", 2, 3, 4, 5, 6, 7, 8, 9, 10, "j", "q", "k"];
 
-let deck = [];
-
-// Make deck
-for (const x of suits) {
-    for (const y of cards) {
-        let card = {Suit: x, Card: cards[y]};
-        deck.push(card);
-    }
-}
-
-console.log(deck); */
-
-
-/* const playerhand = [
-    { house: "d", value: 2 },
-    { house: "d", value: 2 },
-    { house: "d", value: 2 },
-    { house: "d", value: 2 },
-    { house: "d", value: 2 }
-];
-
-let card = {}
-
-playerhand.push(card);
-
-playerhand[0].card
-
-for (let i = 0; i < playerhand.length; i++) {
-    if (typeof(playerhand.card) == number) {
-        playerpoints += playerhand.card;
-    } else if (playerhand.card == "j" || playerhand.card == "q" || playerhand.card == "k") {
-        playerpoints += 10;
-    } else if (playerhand.card == "a") {
-        // Ace logic here
-    }
-} */
 
 // Initialize card variables
 let pcard3;
@@ -124,28 +86,7 @@ function hitp1() {
     p1numcards++;
 }
 
-// Reworked hitp1
-/*function hitp1REWORK() {
 
-    if (p1total >= 21) { return }
-
-    // Deal card
-    // TODO: sync x and y to coreect card in file system - might need to change filenames
-    let x = Math.floor(4 * Math.random());
-    let y = Math.floor(12 * Math.random());
-    let card = { suit: x, card: y }
-
-
-    
-    if (p1numcards == 2) {
-        pcard3 = Math.floor(52 * Math.random()) + 1;
-        document.getElementById("3").src = `images/${pcard3}.bmp`;
-    }
-
-    document.getElementById("p1").innerHTML = p1total;
-
-    p1numcards++;
-} */
 
 
 
@@ -380,7 +321,9 @@ stophitp1 = false;
  else if ((dealertotal > p1total)||(p1total > 21)) {
     document.getElementById("lose").src = `images/lose.gif`;
  }
-
+ else if (dealertotal = p1total) {
+    document.getElementById("tie").src = `images/tie.gif`;
+ }
 
 
 }
@@ -474,7 +417,6 @@ if((dcard1==13)||(dcard1==26)||(dcard1==39)||(dcard1==52)) { dealertotal=dealert
 document.getElementById("dealer").innerHTML = dealertotal;
 
 //------------------------------------------END-----------------------------------------
-
 
 
 
